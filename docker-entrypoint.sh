@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+chown -R www-data:www-data ${GSALES_HOME}/DATA
+
 if [ -e  ${GSALES_HOME}/lib/inc.cfg.php ]; then
 	exec "$@"
 	exit 0
